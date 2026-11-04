@@ -1,4 +1,4 @@
-self.__VERSION="mw2jy7gw";self.__PRECACHE=["./","./start.html","./assets/main-Cq8DKq_Y.js","./assets/start-DOYgpFRy.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-BWrL0X_8.css","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png","./icons/apple-touch-icon.png","./device.webp"];
+self.__VERSION="mw2k3bk3";self.__PRECACHE=["./","./start.html","./assets/main-DdgxtoGA.js","./assets/start-DOYgpFRy.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-BWrL0X_8.css","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png","./icons/apple-touch-icon.png","./device.webp"];
 /* Service worker: offline app shell + Web Push.
  * `self.__PRECACHE` and `self.__VERSION` are injected at build time (vite.config.js). */
 
@@ -68,7 +68,7 @@ self.addEventListener('message', (event) => {
 })
 
 self.addEventListener('push', (event) => {
-  let data = { title: 'Bean Recorder', body: 'Something happened on your recorder' }
+  let data = { title: 'VoiceBean', body: 'Something happened on your recorder' }
   try {
     if (event.data) data = { ...data, ...event.data.json() }
   } catch {

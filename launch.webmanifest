@@ -1,7 +1,7 @@
 {
-  "name": "Bean Recorder",
-  "short_name": "Bean Recorder",
-  "description": "Opens Bean Recorder in Bluefy (on iPhone, Bluetooth needs the Bluefy browser)",
+  "name": "VoiceBean",
+  "short_name": "VoiceBean",
+  "description": "Opens VoiceBean in Bluefy (on iPhone, Bluetooth needs the Bluefy browser)",
   "id": "./start.html",
   "start_url": "./start.html?launch=1",
   "scope": "./",

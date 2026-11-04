@@ -1,6 +1,6 @@
 {
-  "name": "Bean Recorder",
-  "short_name": "Bean Recorder",
+  "name": "VoiceBean",
+  "short_name": "VoiceBean",
   "description": "Connect to your soundcore Work recorder over Bluetooth, sync recordings and play them offline",
   "id": "./",
   "start_url": "./",
