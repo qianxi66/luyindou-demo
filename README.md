@@ -1,4 +1,4 @@
-# Bean Recorder · web demo
+# VoiceBean · web demo
 
 Connect to a soundcore Work (D3200) recorder over Bluetooth from your phone, then download and play its recordings.
 
