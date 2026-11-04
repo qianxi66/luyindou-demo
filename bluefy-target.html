@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bluefy test target</title>
+<style>
+  body { margin:0; font:17px/1.5 -apple-system, sans-serif; background:#f4f7fa; color:#101828; text-align:center; }
+  main { max-width:420px; margin:0 auto; padding:48px 16px; }
+  .tab { font-size:64px; font-weight:800; letter-spacing:.04em; color:#0a8fd6; margin:8px 0; }
+  .card { background:#fff; border-radius:18px; padding:20px; margin:14px 0; box-shadow:0 6px 24px rgba(0,0,0,.05); }
+  .muted { color:#667085; font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="muted" style="margin:0">Bluefy test page</p>
+  <div class="card">
+    <div>Tab</div>
+    <div class="tab" id="tab"></div>
+    <div>Loaded <b id="loads"></b> in this tab</div>
+    <div class="muted">Last load: <span id="time"></span></div>
+  </div>
+  <p class="muted">Now go back to Safari and tap the next test link.</p>
+</main>
+<script>
+  // sessionStorage belongs to one tab and survives reloads of that tab:
+  // same letter = same tab, a higher count = the tab was reloaded.
+  var id = sessionStorage.getItem('tabId')
+  if (!id) {
+    id = 'ABCDEFGHJKLMNPQRSTUVWXYZ'[Math.floor(Math.random() * 24)] + Math.floor(Math.random() * 10)
+    sessionStorage.setItem('tabId', id)
+  }
+  var n = Number(sessionStorage.getItem('loads') || 0) + 1
+  sessionStorage.setItem('loads', String(n))
+  document.getElementById('tab').textContent = id
+  document.getElementById('loads').textContent = n === 1 ? 'once' : n + ' times'
+  document.getElementById('time').textContent = new Date().toLocaleTimeString()
+</script>
+</body>
+</html>

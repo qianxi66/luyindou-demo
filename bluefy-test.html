@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bluefy link test</title>
+<style>
+  body { margin:0; font:16px/1.5 -apple-system, sans-serif; background:#f4f7fa; color:#101828; }
+  main { max-width:520px; margin:0 auto; padding:28px 16px 40px; }
+  h1 { font-size:22px; margin:0 0 6px; }
+  .muted { color:#667085; font-size:14px; }
+  a { display:block; margin:10px 0; padding:14px 16px; border-radius:14px; background:#0a8fd6; color:#fff; text-decoration:none; font-weight:600; }
+  a.first { background:#101828; }
+  code { display:block; margin-top:4px; font:12px ui-monospace, Menlo, monospace; font-weight:400; opacity:.85; word-break:break-all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Bluefy link test</h1>
+  <p class="muted">Open this page in Safari. Tap “Start” first, then go back to Safari and tap tests 1 to 5 one by one.
+    After each tap, look at the letter and the count on the Bluefy page.</p>
+  <div id="links"></div>
+</main>
+<script>
+  var target = new URL('./bluefy-target.html', location.href).href
+  var bare = target.replace(/^https?:\/\//, '')
+  var links = [
+    ['Start: open the test page in Bluefy', 'bluefy://open?url=' + encodeURIComponent(target), 'first'],
+    ['Test 1', 'bluefy://open?url=' + encodeURIComponent(target)],
+    ['Test 2', 'bluefy://?url=' + encodeURIComponent(target)],
+    ['Test 3', 'bluefy://' + bare],
+    ['Test 4', 'bluefys://' + bare],
+    ['Test 5', 'bluefy:' + target],
+  ]
+  document.getElementById('links').innerHTML = links.map(function (l) {
+    return '<a class="' + (l[2] || '') + '" href="' + l[1] + '">' + l[0] + '<code>' + l[1].replace(/&/g, '&amp;') + '</code></a>'
+  }).join('')
+</script>
+</body>
+</html>
