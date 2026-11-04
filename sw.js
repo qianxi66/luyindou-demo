@@ -1,4 +1,4 @@
-self.__VERSION="mw2nfjhz";self.__PRECACHE=["./","./start.html","./assets/main-C35u1OJp.js","./assets/start-BGv37JTJ.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-CS6BDHi7.css","./manifest.webmanifest?v=mw2nfjhz","./icons/icon-192.png?v=mw2nfjhz","./icons/icon-512.png?v=mw2nfjhz","./icons/apple-touch-icon.png?v=mw2nfjhz","./device.webp?v=mw2nfjhz"];
+self.__VERSION="mw2o0flw";self.__PRECACHE=["./","./start.html","./assets/main-Ckh62_gN.js","./assets/start-BGv37JTJ.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-CS6BDHi7.css","./manifest.webmanifest?v=mw2o0flw","./icons/icon-192.png?v=mw2o0flw","./icons/icon-512.png?v=mw2o0flw","./icons/apple-touch-icon.png?v=mw2o0flw","./device.webp?v=mw2o0flw"];
 /* Service worker: offline app shell + Web Push.
  * `self.__PRECACHE` and `self.__VERSION` are injected at build time (vite.config.js). */
 
