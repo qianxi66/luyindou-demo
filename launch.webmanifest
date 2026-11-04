@@ -1,18 +1,33 @@
 {
-  "name": "录音豆",
-  "short_name": "录音豆",
-  "description": "点一下在 Bluefy 中打开录音豆（iPhone 需要 Bluefy 才能使用蓝牙）",
+  "name": "Bean Recorder",
+  "short_name": "Bean Recorder",
+  "description": "Opens Bean Recorder in Bluefy (on iPhone, Bluetooth needs the Bluefy browser)",
   "id": "./start.html",
   "start_url": "./start.html?launch=1",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "lang": "zh-CN",
+  "lang": "en",
   "background_color": "#f4f7fa",
   "theme_color": "#1ec0ec",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

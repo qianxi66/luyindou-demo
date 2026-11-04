@@ -1,93 +1,93 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>录音豆</title>
-    <meta name="description" content="用手机蓝牙直接连接录音豆，查看和播放里面的录音" />
+    <title>Bean Recorder</title>
+    <meta name="description" content="Connect to your recorder over Bluetooth and play its recordings" />
     <meta name="theme-color" content="#f4f7fa" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="录音豆" />
+    <meta name="apple-mobile-web-app-title" content="Bean Recorder" />
     <!-- The home-screen icon added from this page is a launcher: it opens the app inside Bluefy. -->
     <link rel="manifest" href="./launch.webmanifest" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <style>:root{--bg:#f4f7fa;--card:#fff;--text:#101828;--muted:#667085;--line:#e4e9f0;--accent:#0a8fd6;--soft:#e4f5fd;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}@media (prefers-color-scheme:dark){:root{--bg:#0b1218;--card:#141d25;--text:#e8eef3;--muted:#93a1ae;--line:#22303b;--accent:#3db9f2;--soft:#12303f;--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}}*{box-sizing:border-box}body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei,system-ui,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif}main{max-width:520px;padding:calc(env(safe-area-inset-top) + 28px) 16px calc(env(safe-area-inset-bottom) + 32px);margin:0 auto}.head{text-align:center;margin-bottom:18px}.head img{border-radius:20px;width:84px;height:84px;box-shadow:0 8px 24px #0a8fd647}h1{letter-spacing:-.02em;margin:12px 0 4px;font-size:26px}.sub{color:var(--muted);margin:0}.card{background:var(--card);border-radius:18px;margin:14px 0;padding:18px;box-shadow:0 1px 2px #0000000a,0 6px 24px #0000000d}ol{counter-reset:s;margin:0;padding:0;list-style:none}ol>li{counter-increment:s;padding:0 0 20px 44px;position:relative}ol>li:last-child{padding-bottom:0}ol>li:before{content:counter(s);background:var(--accent);color:#fff;border-radius:50%;place-items:center;width:30px;height:30px;font-size:15px;font-weight:700;display:grid;position:absolute;top:0;left:0}ol>li.optional:before{background:var(--line);color:var(--muted)}li>b{display:block}.muted{color:var(--muted);font-size:14px}.btn{width:100%;font:inherit;cursor:pointer;background:var(--soft);color:var(--accent);border:0;border-radius:14px;justify-content:center;align-items:center;gap:8px;margin-top:10px;padding:13px 16px;font-weight:600;text-decoration:none;display:flex}.btn.primary{background:var(--accent);color:#fff}.btn.big{border-radius:16px;padding:18px;font-size:18px}.link{background:var(--bg);word-break:break-all;color:var(--muted);border-radius:12px;margin-top:8px;padding:10px 12px;font:13px ui-monospace,Menlo,monospace}.textlink{color:var(--accent);font-size:14px;font:inherit;cursor:pointer;background:0 0;border:0;margin-top:8px;padding:0;font-size:14px;text-decoration:underline;display:inline-block}.tips{color:var(--muted);margin:0;padding-left:18px;font-size:14px}.tips li{margin:4px 0}.hidden{display:none!important}.ok{color:var(--accent);margin:0;font-weight:600}.share{vertical-align:-3px;width:18px;height:18px;display:inline-block}</style>
-    <script type="module" crossorigin src="./assets/start-vExLBENY.js"></script>
+    <script type="module" crossorigin src="./assets/start-DOYgpFRy.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
   </head>
   <body>
     <main>
       <div class="head">
         <img src="./icons/icon-192.png" alt="" />
-        <h1>录音豆</h1>
-        <p class="sub">用手机蓝牙直接连录音豆，查看和播放里面的录音</p>
+        <h1>Bean Recorder</h1>
+        <p class="sub">Connect to your recorder over Bluetooth and play its recordings</p>
       </div>
 
       <!-- opened from the home-screen icon on iPhone: jump into Bluefy -->
       <section id="launch" class="card hidden">
-        <p class="muted" style="margin:0 0 4px">正在打开 Bluefy…如果没有自动跳转，点下面的按钮：</p>
-        <a class="btn primary big deeplink" href="#">打开录音豆</a>
-        <p class="muted" style="margin:12px 0 0">还没装 Bluefy？<a href="https://apps.apple.com/app/id1492822055">去 App Store 安装（免费）</a></p>
+        <p class="muted" style="margin:0 0 4px">Opening Bluefy… If nothing happens, tap the button:</p>
+        <a class="btn primary big deeplink" href="#">Open Bean Recorder</a>
+        <p class="muted" style="margin:12px 0 0">Don't have Bluefy? <a href="https://apps.apple.com/app/id1492822055">Get it free on the App Store</a></p>
       </section>
 
       <!-- browser already supports Bluetooth (Bluefy on iPhone, Chrome on Android/computer) -->
       <section id="ready" class="card hidden">
-        <p class="ok">✅ 这个浏览器可以直接连接录音豆</p>
-        <a class="btn primary big" href="./">打开录音豆 App</a>
-        <p class="muted" style="margin:12px 0 0">打开后点「搜索并连接」→ 在列表里选 soundcore Work。第一次会请求蓝牙权限，点「好」。</p>
+        <p class="ok">✅ This browser can connect to the recorder</p>
+        <a class="btn primary big" href="./">Open Bean Recorder</a>
+        <p class="muted" style="margin:12px 0 0">Tap “Connect my device” and choose soundcore Work. The first time, you'll be asked for Bluetooth access. Tap OK.</p>
       </section>
 
       <!-- iPhone / iPad in Safari -->
       <section id="ios" class="card hidden">
         <ol>
           <li>
-            <b>安装免费的 Bluefy 浏览器</b>
-            <span class="muted">iPhone 自带的 Safari 不能用蓝牙，Bluefy 可以。装好后回到这一页。</span>
-            <a class="btn" href="https://apps.apple.com/app/id1492822055" target="_blank" rel="noopener">去 App Store 安装 Bluefy</a>
+            <b>Install the free Bluefy browser</b>
+            <span class="muted">Safari on iPhone can't use Bluetooth, but Bluefy can. Come back to this page after installing.</span>
+            <a class="btn" href="https://apps.apple.com/app/id1492822055" target="_blank" rel="noopener">Get Bluefy on the App Store</a>
           </li>
           <li>
-            <b>在 Bluefy 中打开录音豆</b>
-            <span class="muted">点下面的按钮会跳到 Bluefy 并直接打开。</span>
-            <a class="btn primary deeplink" href="#">在 Bluefy 中打开</a>
-            <button class="textlink" id="show-copy">跳不过去？改用复制链接</button>
+            <b>Open Bean Recorder in Bluefy</b>
+            <span class="muted">This button switches to Bluefy and opens it there.</span>
+            <a class="btn primary deeplink" href="#">Open in Bluefy</a>
+            <button class="textlink" id="show-copy">Didn't work? Copy the link instead</button>
             <div id="copy-box" class="hidden">
               <div class="link" id="app-url"></div>
-              <button class="btn" id="copy">复制链接，再到 Bluefy 地址栏粘贴</button>
+              <button class="btn" id="copy">Copy link, then paste it into Bluefy</button>
             </div>
           </li>
           <li>
-            <b>连接录音豆</b>
-            <span class="muted">在 Bluefy 里点「搜索并连接」，弹出「Bluefy 想使用蓝牙」时点「好」，然后选 soundcore Work。连上后到「录音」页下载、播放。</span>
+            <b>Connect your recorder</b>
+            <span class="muted">In Bluefy, tap “Connect my device”. When asked for Bluetooth access, tap OK, then choose soundcore Work. Once connected, open Recordings to download and play.</span>
           </li>
           <li class="optional">
-            <b>（可选）放一个「录音豆」图标到主屏幕</b>
-            <span class="muted">在<b style="display:inline">这个 Safari 页面</b>点底部的分享按钮
+            <b>(Optional) Put an icon on your Home Screen</b>
+            <span class="muted">On <b style="display:inline">this Safari page</b>, tap Share
               <svg class="share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8"/></svg>
-              →「添加到主屏幕」。以后点这个图标，会自动跳进 Bluefy 打开录音豆。</span>
+              → Add to Home Screen. The icon opens Bean Recorder in Bluefy.</span>
           </li>
         </ol>
       </section>
 
       <!-- anything else (desktop Safari / Firefox …) -->
       <section id="other" class="card hidden">
-        <p><b>请换一个浏览器打开</b></p>
-        <p class="muted">这个浏览器不支持网页蓝牙。电脑和安卓手机请用 <b style="display:inline">Chrome</b> 或 <b style="display:inline">Edge</b> 打开下面的链接；iPhone 请用 Bluefy。</p>
+        <p><b>Please use a different browser</b></p>
+        <p class="muted">This browser can't use Bluetooth. On a computer or Android phone, open the link below in <b style="display:inline">Chrome</b> or <b style="display:inline">Edge</b>. On iPhone, use Bluefy.</p>
         <div class="link" id="app-url-2"></div>
-        <button class="btn" id="copy-2">复制链接</button>
+        <button class="btn" id="copy-2">Copy link</button>
       </section>
 
       <div class="card" id="tips">
-        <p style="margin:0 0 6px"><b>小提示</b></p>
+        <p style="margin:0 0 6px"><b>Tips</b></p>
         <ul class="tips">
-          <li>把录音豆从充电仓取出，或打开仓盖、按一下按键唤醒它。</li>
-          <li>录音豆同一时间只能连一部手机，用完点「断开」，下一位再连。</li>
-          <li>下载录音时请保持页面在前台，切到后台蓝牙会断开。</li>
-          <li>录音只保存在你自己的手机里，网页不会上传任何数据。</li>
+          <li>Take the recorder out of its case, or open the lid and press its button to wake it.</li>
+          <li>The recorder connects to one phone at a time. Tap Disconnect when you're done so the next person can connect.</li>
+          <li>Keep the page open while downloading; switching away drops Bluetooth.</li>
+          <li>Recordings stay on your phone. Nothing is uploaded.</li>
         </ul>
       </div>
-      <p class="muted" style="text-align:center">非安克 / 飞书官方产品，仅用于演示</p>
+      <p class="muted" style="text-align:center">Demo only · not an official Anker or Feishu product</p>
     </main>
   </body>
 </html>

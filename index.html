@@ -1,33 +1,33 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>录音豆</title>
-    <meta name="description" content="安克录音豆（soundcore Work）本地管理：蓝牙连接、录音同步、离线播放" />
+    <title>Bean Recorder</title>
+    <meta name="description" content="Connect to your soundcore Work recorder over Bluetooth, sync recordings and play them offline" />
     <meta name="theme-color" content="#f4f7fa" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="录音豆" />
+    <meta name="apple-mobile-web-app-title" content="Bean Recorder" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
-    <script type="module" crossorigin src="./assets/main-CVODwDq6.js"></script>
+    <script type="module" crossorigin src="./assets/main-Cq8DKq_Y.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-CjOw-flB.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-BWrL0X_8.css">
   </head>
   <body>
     <div id="app">
       <header class="topbar">
-        <h1 class="title" id="page-title">我的设备</h1>
+        <h1 class="title" id="page-title">My Devices</h1>
         <button class="pill" id="conn-pill" data-action="goto" data-tab="device"></button>
       </header>
       <main id="view" tabindex="-1"></main>
       <nav class="tabbar" id="tabbar">
-        <button data-action="goto" data-tab="device" aria-label="我的设备"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 11.2 12 4.5l8 6.7V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/><path d="M9.5 15.5h5"/></svg></span></button>
-        <button data-action="goto" data-tab="recordings" aria-label="录音"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M9 9v6M12 7.5v9M15 9v6"/></svg></span></button>
-        <button data-action="goto" data-tab="settings" aria-label="设置"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span></button>
+        <button data-action="goto" data-tab="device" aria-label="My Devices"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 11.2 12 4.5l8 6.7V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/><path d="M9.5 15.5h5"/></svg></span></button>
+        <button data-action="goto" data-tab="recordings" aria-label="Recordings"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M9 9v6M12 7.5v9M15 9v6"/></svg></span></button>
+        <button data-action="goto" data-tab="settings" aria-label="Settings"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg></span></button>
       </nav>
       <div id="toast" role="status" aria-live="polite"></div>
     </div>
