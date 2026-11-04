@@ -1,4 +1,4 @@
-self.__VERSION="mw2kbljg";self.__PRECACHE=["./","./start.html","./assets/main-DdgxtoGA.js","./assets/start-DOYgpFRy.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-BWrL0X_8.css","./manifest.webmanifest","./icons/icon-192.png","./icons/icon-512.png","./icons/apple-touch-icon.png","./device.webp"];
+self.__VERSION="mw2ki3ti";self.__PRECACHE=["./","./start.html","./assets/main-D7DN_UsD.js","./assets/start-DtKl0lHd.js","./assets/modulepreload-polyfill-P2Xu9kJm.js","./assets/opus-decoder-BeLHPOFH.js","./assets/main-BWrL0X_8.css","./manifest.webmanifest?v=mw2ki3ti","./icons/icon-192.png?v=mw2ki3ti","./icons/icon-512.png?v=mw2ki3ti","./icons/apple-touch-icon.png?v=mw2ki3ti","./device.webp?v=mw2ki3ti"];
 /* Service worker: offline app shell + Web Push.
  * `self.__PRECACHE` and `self.__VERSION` are injected at build time (vite.config.js). */
 
@@ -31,7 +31,8 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     // network first so updates arrive; cached shell when offline
     event.respondWith(
-      fetch(req)
+      // always revalidate pages (GitHub Pages lets browsers reuse them for 10 min)
+      fetch(req, { cache: 'no-cache' })
         .then((res) => {
           if (res.ok) {
             const copy = res.clone()
@@ -48,19 +49,20 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  event.respondWith(
-    caches.match(req, { ignoreSearch: true }).then(
-      (hit) =>
-        hit ||
-        fetch(req).then((res) => {
-          if (res.ok && res.type === 'basic') {
-            const copy = res.clone()
-            caches.open(CACHE).then((c) => c.put(req, copy))
-          }
-          return res
-        }),
-    ),
-  )
+  const store = (res) => {
+    if (res.ok && res.type === 'basic') {
+      const copy = res.clone()
+      caches.open(CACHE).then((c) => c.put(req, copy))
+    }
+    return res
+  }
+  if (url.pathname.includes('/assets/')) {
+    // hashed build files never change: cache first
+    event.respondWith(caches.match(req).then((hit) => hit || fetch(req).then(store)))
+    return
+  }
+  // icons, images, manifests: network first so a new icon or name shows up at once
+  event.respondWith(fetch(req).then(store).catch(() => caches.match(req, { ignoreSearch: true })))
 })
 
 self.addEventListener('message', (event) => {
